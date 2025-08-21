@@ -19,6 +19,6 @@ const [total, iva] = taxCalculation({
     IVA: 0.12
 });
 
-console.log('Total', total);
-console.log('IVA', iva);
-console.log(ShoppingCart);
+//console.log('Total', total);
+//console.log('IVA', iva);
+//console.log(ShoppingCart);
