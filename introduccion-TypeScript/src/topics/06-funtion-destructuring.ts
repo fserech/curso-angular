@@ -2,6 +2,7 @@ interface Product {
     description: string;
     price: number;
 }
+export type { Product };
 
 const phone: Product = {
     description: 'Nokia A1',
@@ -20,7 +21,7 @@ interface TaxCalculationOptions{
 
 //function taxCalculation(options: TaxCalculationOptions):  [number, number] {
     //function taxCalculation({IVA, products}: TaxCalculationOptions):  [number, number] {
-         function taxCalculation(options: TaxCalculationOptions):  [number, number] {
+export function taxCalculation(options: TaxCalculationOptions):  [number, number] {
     
           const {IVA, products} = options;
             let total = 0;
@@ -32,6 +33,7 @@ interface TaxCalculationOptions{
 
     return [total, total * IVA];
 }
+
 
 const shoppingCart = [phone, tablet];
 const IVA = 0.12;
