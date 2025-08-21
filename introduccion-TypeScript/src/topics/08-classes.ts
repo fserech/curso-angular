@@ -8,7 +8,25 @@ export class Person {
     }
 
 }
+//ESTENDER PROPIEDADES DE PERSON
+export class Hero extends Person {
+    public alterEgo: string;
+    public age: number;
+    public realName: string;
 
-    const ironman = new Person('iOMAN', 'Calle Falsa 123'); // los () significa que esta invocando una clase
+    constructor(
+        alterEgo: string,
+        age: number,
+        realName: string,
+    ) {
+        super(realName, ''); // You may want to adjust the address value as needed
+        this.alterEgo = alterEgo;
+        this.age = age;
+        this.realName = realName;
+    }
+}
+    const ironman = new Hero('Ironman', 45, 'Tony Stark'); // los () significa que esta invocando una clase
+    
+    console.log(ironman); // los () significa que esta invocando una clase
 
-    console.log(ironman);
+ 
