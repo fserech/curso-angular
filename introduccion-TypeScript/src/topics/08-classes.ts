@@ -1,16 +1,14 @@
 export class Person {
     public name: string;
     public address: string;
-
     //inicializando la variables 
-
-    constructor() {
-        this.name = 'Fernando';
-        this.address = 'Calle Falsa 123';
+    constructor(name: string, address: string) {
+        this.name = name;
+        this.address = address;
     }
 
 }
 
-    const ironman = new Person();
+    const ironman = new Person('iOMAN', 'Calle Falsa 123'); // los () significa que esta invocando una clase
 
     console.log(ironman);
