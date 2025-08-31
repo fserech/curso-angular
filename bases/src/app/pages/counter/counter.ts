@@ -1,10 +1,22 @@
 import { Component } from '@angular/core';
 
 @Component({
-template: `
-  <h1>counter works!</h1>
-`
+  templateUrl: './counter.html',
+  styleUrls: [
+    './counter.css'
+  ]
 })
 export class Counter {
+  counter = 10;
 
-}
+  increaseBy(value: number) {
+    this.counter += value;
+  }
+
+  decrement() {
+    this.counter--;
+  }
+  reset() {
+    this.counter = 0;
+  }
+  }
