@@ -7,14 +7,13 @@ export class Counter {
   counter = 10;// Variable normal
    counterSignal = signal(10); // Signal (reactivo)
 
-  // Incremento
-  increaseBy(value: number) {
+
+  increaseBy(value: number) { // Incremento
     this.counter += value;
     this.counterSignal.update((current) => current + value);
   }
 
-  // Decremento
-  decrement() {
+  decrement() {  // Decremento
     this.counter--;
     this.counterSignal.update((current) => current - 1);
   }
