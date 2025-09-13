@@ -1,5 +1,5 @@
 import { UpperCasePipe } from '@angular/common';
-import { Component, signal } from '@angular/core';
+import { Component, computed, signal } from '@angular/core';
 
 @Component({
   selector: 'app-hero',
@@ -11,10 +11,18 @@ export class Hero {
 
  name = signal('Ironman');
   age = signal(45);
+  // Señales computadas
 
-getHeroDescription() {
-  return `${ this.name() } - ${ this.age() }`;
-}
+  heroDescription = computed(() => {
+    const description = `${ this.name() } - ${ this.age() }`;
+    return description;
+  });
+
+//aca cambia la funcion por la señal computada
+  //getHeroDescription() {
+  //return `${ this.name() } - ${ this.age() }`;
+//}
+
 changeHero() {
   this.name.set('Spiderman');
   this.age.set(22);
