@@ -12,5 +12,10 @@ export const routes: Routes = [
 {
   path: 'hero',
   component: Hero
+},
+// Redireccionamiento al inicio si la ruta no existe
+{
+  path: '**',
+  redirectTo: ''
 }
 ];
