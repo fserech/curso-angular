@@ -1,4 +1,23 @@
+<style>
+  nav{
+    display: flex;
+    justify-content: space-around;
+    background-color: #212121;
+    color: white;
+  padding: 10px;
+  }
+  nav a{
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+  }
+  nav a.active{
+    color: #4caf50;
+  }
+</style>
 <nav>
-  <a routerLink="/">Inicio</a>
-  <a routerLink="/hero">Hero  </a>
+  <a routerLink="/" routerLinkActive="active"
+  [routerLinkActiveOptions]="{exact: true}">Contador</a>
+
+  <a [routerLink]="['/hero']" [routerLinkActive]="['active']">Hero</a>
 </nav>
